@@ -7,21 +7,40 @@ class MyHomePage extends StatelessWidget {
 Widget build(BuildContext context) {
   return Scaffold(
     backgroundColor: Colors.black,
-    body: Align(
-      alignment: Alignment.topCenter,
+    body: Center(
       child: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset('assets/logo.png'),
-          OutlinedButton(
-            onPressed: () {
-              //vezes que o botão foi pressionado;
-            }, 
-            child: const Text("Botão"),),
-          const Text("")
+          Expanded(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: [
+                Image.asset('assets/logo.png'
+
+                ),
+                SizedBox(height: 50),
+
+                Text("jogue e se divirta sei la não pensei nessa parte ainda",
+                style: TextStyle(color: Colors.white)
+                
+                ),
+              Spacer(flex: 3),
+              ],
+            ),
+          )
         ],
-      ),
-    ),
-    );
+      )
+    )
+  );
 }
 }
+
+
+
+
+
+//child: Text("jogue e se divirta sei la não pensei nessa parte ainda",
+  //style: TextStyle(color: Colors.white),
+//Image.asset('assets/logo.png')
+//padding: const EdgeInsets.only(top: 50),
